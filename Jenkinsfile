@@ -1,5 +1,4 @@
-
-     pipeline{
+ pipeline{
     agent any 
     tools{
          maven 'M2_HOME'
@@ -23,7 +22,7 @@
     }
    stage('upload artifact'){
         steps{
-            sh 'curl --upload-file target/bioMedical-0.0.2-SNAPSHOT.jar -u admin:devops -v 'http://198.58.119.40:8081/repository/kone-1/
+            sh 'curl --upload-file target/bioMedical-0.0.2-SNAPSHOT.jar -u admin:devops -v http://198.58.119.40:8081/repository/kone-1/'
         }
     }
 
